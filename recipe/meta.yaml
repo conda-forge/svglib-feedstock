@@ -1,7 +1,7 @@
 {% set name = "svglib" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.0" %}
 {% set hash_type = "sha256" %}
-{% set hash = "1f8cb633f154b83987e3a906a55cf69c8739c0df5ea4eee024677c3e8fb62f55" %}
+{% set hash = "b9407371dbbc895e7b922251353b7bd1a985bf9a6eef6661e34840ac358cf297" %}
 
 package:
   name: {{ name }}

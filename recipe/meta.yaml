@@ -13,23 +13,31 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1000
+  number: 1001
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
     - pip
     - python
-    - pytest-runner
 
   run:
     - python
     - reportlab
     - lxml
+    - tinycss2 >=0.6.0
+    - cssselect2 >=0.2.0
 
 test:
+  requires:
+    - pytest-runner
   imports:
     - svglib
+  source_files:
+    - tests
+  commands:
+    # skipping tests/test_samples.py because it is too slow
+    - pytest tests -k "not test_samples"
 
 about:
   home: https://github.com/deeplook/svglib

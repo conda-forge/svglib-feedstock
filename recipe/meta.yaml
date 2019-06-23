@@ -1,7 +1,7 @@
 {% set name = "svglib" %}
-{% set version = "0.9.0" %}
+{% set version = "0.9.1" %}
 {% set hash_type = "sha256" %}
-{% set hash = "b9407371dbbc895e7b922251353b7bd1a985bf9a6eef6661e34840ac358cf297" %}
+{% set hash = "7daa695db7d54c2359014c6ebb98a995c527339488272c65175d67a5252a690b" %}
 
 package:
   name: {{ name }}
@@ -13,7 +13,7 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
-  number: 1001
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:

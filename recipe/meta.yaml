@@ -12,8 +12,9 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  skip: True  # [py<36]
 
 requirements:
   host:
@@ -40,7 +41,7 @@ test:
 
 about:
   home: https://github.com/deeplook/svglib
-  license: LGPL 3
+  license: LGPL-3.0-only
   license_file: LICENSE.txt
   summary: A pure-Python library for reading and converting SVG
   license_family: LGPL

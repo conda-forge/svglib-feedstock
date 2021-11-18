@@ -14,14 +14,15 @@ source:
 build:
   number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
+  skip: True  # [py<36]
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python
 
   run:
-    - python >=3.6
+    - python
     - reportlab
     - lxml
     - tinycss2 >=0.6.0

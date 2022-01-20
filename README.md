@@ -3,7 +3,7 @@ About svglib
 
 Home: https://github.com/deeplook/svglib
 
-Package license: LGPL 3
+Package license: LGPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/svglib-feedstock/blob/master/LICENSE.txt)
 

@@ -35,9 +35,6 @@ test:
     - svglib
   source_files:
     - tests
-  commands:
-    # Skipping tests/test_samples.py because it is too slow.
-    - pytest tests -k "not test_samples"
 
 about:
   home: https://github.com/deeplook/svglib

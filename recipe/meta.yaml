@@ -1,6 +1,6 @@
 {% set name = "svglib" %}
-{% set version = "1.5.1" %}
-{% set hash = "3ae765d3a9409ee60c0fb4d24c2deb6a80617aa927054f5bcd7fc98f0695e587" %}
+{% set version = "1.6.0" %}
+{% set hash = "4c38a274a744ef0d1677f55d5d62fc0fb798819f813e52872a796e615741733d" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vvv
   noarch: python
 

@@ -1,6 +1,6 @@
 {% set name = "svglib" %}
-{% set version = "1.6.0" %}
-{% set hash = "4c38a274a744ef0d1677f55d5d62fc0fb798819f813e52872a796e615741733d" %}
+{% set version = "2.0.0" %}
+{% set hash = "ac94889c758635bb806b2964e5943e192ab68f66b9f9adfbe08178680c53b47f" %}
 
 package:
   name: {{ name }}
@@ -24,7 +24,7 @@ requirements:
 
   run:
     - python >={{ python_min }}
-    - cssselect2 >=0.2.0    
+    - cssselect2 >=0.2.0
     - lxml >=6.0.0
     - reportlab >=4.4.3
     - rlpycairo >=0.4.0

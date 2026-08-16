@@ -1,6 +1,6 @@
 {% set name = "svglib" %}
-{% set version = "2.1.0" %}
-{% set hash = "c079bc5fa9e12736b23e7855413320a78afdab54c9492de48ade7bf318187605" %}
+{% set version = "2.2.0" %}
+{% set hash = "bde5c5f9b0e091f1e210b8aafdda07a49bd8ebf21c0e90d67383a665c83597ac" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ hash }}
 
 build:

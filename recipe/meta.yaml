@@ -1,6 +1,6 @@
 {% set name = "svglib" %}
-{% set version = "2.3.0" %}
-{% set hash = "576f417c681938e76e3d3bc2d92898c1b3f4b7248c9880b25e439c6e6d897aae" %}
+{% set version = "2.3.1" %}
+{% set hash = "c0a57bacb5f53b1a0db2321fe37d350c45195cbee16d84741fb97ae8dcd0a702" %}
 
 package:
   name: {{ name }}
@@ -28,6 +28,7 @@ requirements:
     - lxml >=6.0.0
     - reportlab >=4.4.3
     - rlpycairo >=0.4.0
+    - pillow >=9.0.0
     - tinycss2 >=0.6.0
 
 test:

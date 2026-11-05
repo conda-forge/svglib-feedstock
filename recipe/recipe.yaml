@@ -1,0 +1,59 @@
+schema_version: 1
+
+context:
+  name: svglib
+  version: "2.4.0"
+  hash: 90f58628ca7e6d48b40f638ad0dab472f2994f823eb33a623c8fa28e434ce574
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: ${{ hash }}
+  file_name: ${{ name }}-${{ version }}.tar.gz
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vvv
+
+requirements:
+  host:
+    - hatchling
+    - pip
+    - python ${{ python_min }}.*
+  run:
+    - python >=${{ python_min }}
+    - cssselect2 >=0.2.0
+    - lxml >=6.0.0
+    - reportlab >=4.4.3
+    - pillow >=9.0.0
+    - tinycss2 >=0.6.0
+
+tests:
+  - python:
+      imports:
+        - svglib
+      pip_check: false
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - files:
+      source:
+        - tests
+    requirements:
+      run:
+        - pytest-runner
+        - python ${{ python_min }}.*
+
+about:
+  license: LGPL-3.0-only
+  license_file: LICENSE.txt
+  summary: A pure-Python library for reading and converting SVG
+  homepage: https://github.com/deeplook/svglib
+
+extra:
+  recipe-maintainers:
+    - nicoddemus
